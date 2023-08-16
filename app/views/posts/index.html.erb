@@ -3,7 +3,11 @@
 <% @posts.each do |post| %>
 <h2><%= link_to  post.title , post %></h2>
 <p>  <%= post.content %></p>
-<p><%= link_to  "Edit Post", edit_post_path(post) %></p>
+<p>
+<%= link_to  "Edit Post", edit_post_path(post) %>
+<%= link_to  "Delete", post , :confirm => "Are U Sure?" ,  :method => :Delete %>
+</p>
+
 <hr/>
 <% end %>
 
