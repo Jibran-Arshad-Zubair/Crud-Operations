@@ -31,7 +31,7 @@ class PostsController < ApplicationController
         if @post.update(post_params)
             redirect_to posts_path, :notice => "Your Post has been Updated "
             else
-               render "Edit"
+               render "edit"
             end  
     end 
 
